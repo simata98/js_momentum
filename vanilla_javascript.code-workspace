@@ -1,0 +1,13 @@
+{
+	"folders": [
+    {
+      "path": ".."
+    },
+    {
+      "path": "..\\..\\backjun"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "js"
+  }
+}
