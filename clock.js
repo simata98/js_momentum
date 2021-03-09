@@ -8,9 +8,9 @@ function getTime() {
   const seconds = date.getSeconds();
   // '?' means "if it is true" ':' means " if it is not true"
   // I did this beacause I can watch seconds "00 ~ 09"
-  clockTitle.innerText = `${hours}:${minutes}:${
-    seconds < 10 ? `0${seconds}` : seconds
-  }`;
+  clockTitle.innerText = `${hours < 10 ? `0${hours}` : hours}:${
+    minutes < 10 ? `0${minutes}` : minutes
+  }:${seconds < 10 ? `0${seconds}` : seconds}`;
 }
 
 function init() {
