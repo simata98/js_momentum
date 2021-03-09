@@ -4,8 +4,26 @@ const toDoForm = document.querySelector(".js-toDoForm"),
 
 // the reason of using toDos inside of double quote is to save a string on a variable
 const TODOS_LS = "toDos";
+
 // you can save toDos in array
-const toDos = [];
+let toDos = [];
+
+// delete todo things
+function deleteToDo(event) {
+  const btn = event.target; // target helps which button clicked
+  // parentNode helps find child's parent. you can see by "console.dir()"
+  const li = btn.parentNode;
+  toDoList.removeChild(li);
+  // filter gives array that checked 'filterFn'
+  const cleanToDos = toDos.filter(function (toDo) {
+    return toDo.id !== parseInt(li.id); // li.id is string...
+  });
+  console.log(cleanToDos);
+  toDos = cleanToDos;
+  console.log(cleanToDos);
+  saveToDos();
+}
+
 // localStorage setting
 function saveToDos() {
   // localStorage.setItem(TODOS_LS, toDos); <-- error
@@ -16,13 +34,14 @@ function saveToDos() {
 function paintToDo(text) {
   const li = document.createElement("li");
   const delBtn = document.createElement("button");
-  delBtn.innerText = "❌";
   const span = document.createElement("span");
   const newId = toDos.length + 1;
+  delBtn.innerText = "❌";
+  delBtn.addEventListener("click", deleteToDo);
   span.innerText = text;
   // appendChild = put in father element
-  li.appendChild(span);
   li.appendChild(delBtn);
+  li.appendChild(span);
   li.id = newId; // put newId number in li.id (for css)
   toDoList.appendChild(li);
   const toDoObj = {
