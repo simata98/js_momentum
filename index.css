@@ -1,5 +1,43 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+input:focus {
+  outline: none;
+}
+
+input{
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  text-align: center;
+  border-style: none;
+  background: transparent;
+}
+
+.contents {
+  text-align: center;
+}
+
+.wrapper {
+  display: inline-block;
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin: auto;
+  height: 240px;
+}
+
 body {
   background-color: #636e72;
+  width: 100%;
+  height: 100%;
+  font-size: 1.2em;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: white;
 }
 
 body {
@@ -43,3 +81,61 @@ body {
   animation: fadeIn .5s linear;
 }
 
+/* weather */
+.js-weather{
+  display: inline-block;
+  text-align: center;
+  margin-top: 10%;
+  color: #FDFD97;
+}
+
+
+/* clock */
+.js-clock {
+  color: #F8D4CE;
+  font-size: 2em;
+}
+
+::placeholder{
+  color:#9EABD6;
+  font-weight: 700;
+}
+
+.js-toDoForm{
+  margin: auto;
+  width: 30%;
+  margin-bottom: 10px;
+}
+
+.js-toDoList li{
+  border-bottom: 1px solid rgba(195, 232, 181, 0.5);
+  margin: auto;
+  padding: 4px;
+  width: 40%;
+  border-width: 3px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.js-toDoList li {
+  margin-bottom: 10px;
+}
+
+
+.js-greetings {
+  color: #DFC6DE;
+}
+
+.todoSpan {
+  color: #FFEEB8;
+  display: inline-block;
+  text-align: center;
+  width: 35vw;
+  overflow-wrap: break-word;
+}
+
+.delBtn {
+  background: transparent;
+}
