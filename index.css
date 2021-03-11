@@ -83,9 +83,9 @@ body {
 
 /* weather */
 .js-weather{
-  display: inline-block;
+  display: block;
   text-align: center;
-  margin-top: 10%;
+  margin-top: 5%;
   color: #FDFD97;
 }
 
@@ -93,7 +93,7 @@ body {
 /* clock */
 .js-clock {
   color: #F8D4CE;
-  font-size: 2em;
+  font-size: 40px;
 }
 
 ::placeholder{
@@ -111,7 +111,7 @@ body {
   border-bottom: 1px solid rgba(195, 232, 181, 0.5);
   margin: auto;
   padding: 4px;
-  width: 40%;
+  width: 38%;
   border-width: 3px;
 }
 
@@ -126,6 +126,7 @@ ul {
 
 .js-greetings {
   color: #DFC6DE;
+  font-size: 30px;
 }
 
 .todoSpan {
@@ -134,6 +135,7 @@ ul {
   text-align: center;
   width: 35vw;
   overflow-wrap: break-word;
+  font-size: 20px;
 }
 
 .delBtn {
